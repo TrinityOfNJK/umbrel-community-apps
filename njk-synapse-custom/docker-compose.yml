@@ -3,8 +3,8 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: synapse_server_1
-      APP_PORT: $APP_SYNAPSE_PORT
+      APP_HOST: njk-umbrel
+      APP_PORT: 8008
       PROXY_AUTH_ADD: "false"
 
   server:
@@ -18,7 +18,7 @@ services:
     environment:
       UID: "1000"
       GID: "1000"
-      SYNAPSE_HTTP_PORT: "${APP_SYNAPSE_PORT}"
+      SYNAPSE_HTTP_PORT: "8008"
       SYNAPSE_SERVER_NAME: "silly.com"
       SYNAPSE_REPORT_STATS: "yes"
       SYNAPSE_ENABLE_REGISTRATION: "no"
