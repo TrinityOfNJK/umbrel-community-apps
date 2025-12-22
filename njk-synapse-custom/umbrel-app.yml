@@ -8,6 +8,6 @@ description: |
 developer: TrinityOfNJK
 website: https://matrix.org
 dependencies: []
-repo: https://github.com/TrinityOfNJK/umbrel-custom-app-store
+repo: https://github.com/TrinityOfNJK/umbrel-community-apps
 port: 8008
 path: /
