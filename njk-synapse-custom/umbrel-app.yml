@@ -1,4 +1,4 @@
-id: synapse-custom
+id: njk-synapse-custom
 name: Synapse (Custom)
 version: "1.0.0"
 tagline: Fully configurable Matrix Synapse server
