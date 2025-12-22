@@ -1,0 +1,4 @@
+server_name:
+  type: string
+  default: "silly.com"
+  description: Matrix server name (cannot be changed after first start)

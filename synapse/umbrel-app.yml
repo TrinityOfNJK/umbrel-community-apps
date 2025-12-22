@@ -1,0 +1,13 @@
+id: synapse-custom
+name: Synapse (Custom)
+version: "1.0.0"
+tagline: Fully configurable Matrix Synapse server
+description: |
+  Custom Matrix Synapse server with full configuration control.
+  No Umbrel defaults or Tor injection.
+developer: TrinityOfNJK
+website: https://matrix.org
+dependencies: []
+repo: https://github.com/TrinityOfNJK/umbrel-custom-app-store
+port: 8008
+path: /
