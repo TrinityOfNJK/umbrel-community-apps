@@ -3,7 +3,7 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: njk-umbrel
+      APP_HOST: umbrel
       APP_PORT: 8008
       PROXY_AUTH_ADD: "false"
 
