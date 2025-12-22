@@ -1,15 +1,26 @@
-version: "3.8"
+version: "3.7"
 
 services:
-  synapse:
-    image: matrixdotorg/synapse:latest
-    container_name: synapse-custom
-    restart: unless-stopped
-    ports:
-      - "8008:8008"
-    volumes:
-      - ./data:/data
+  app_proxy:
     environment:
-      SYNAPSE_SERVER_NAME: "${SERVER_NAME}"
-      SYNAPSE_REPORT_STATS: "no"
-    user: "991:991"
+      APP_HOST: synapse_server_1
+      APP_PORT: $APP_SYNAPSE_PORT
+      PROXY_AUTH_ADD: "false"
+
+  server:
+    image: matrixdotorg/synapse:v1.144.0@sha256:fc0d7409b5022124a4c48283deb5f95d7c971ba9f5eef60b5dc701b1abcafff4
+    restart: on-failure
+    stop_grace_period: 1m
+    entrypoint: "bash"
+    command: "-c './start.py generate && ./start.py migrate_config && echo -e \"\nenable_registration_without_verification: true\" >> /data/homeserver.yaml && exec ./start.py'"
+    volumes:
+      - ${APP_DATA_DIR}/data/synapse:/data
+    environment:
+      UID: "1000"
+      GID: "1000"
+      SYNAPSE_HTTP_PORT: "${APP_SYNAPSE_PORT}"
+      SYNAPSE_SERVER_NAME: "silly.com"
+      SYNAPSE_REPORT_STATS: "yes"
+      SYNAPSE_ENABLE_REGISTRATION: "no"
+      SYNAPSE_NO_TLS: "yes"
+      SYNAPSE_PRESENCE_ENABLED: "no"
