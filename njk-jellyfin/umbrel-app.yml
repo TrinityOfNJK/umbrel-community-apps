@@ -4,6 +4,7 @@ category: media
 name: Jellyfin
 version: "1.0"
 tagline: The Free Software Media System
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jellyfin.png
 description: >-
   Custom docker compose for mounting external drives.
 developer: Jellyfin
@@ -12,10 +13,6 @@ dependencies: []
 repo: https://github.com/TrinityOfNJK/umbrel-community-apps
 support: https://github.com/TrinityOfNJK/umbrel-community-apps/issues
 port: 8096
-gallery:
-  - 1.jpg
-  - 2.jpg
-  - 3.jpg
 path: ""
 defaultUsername: ""
 defaultPassword: ""
