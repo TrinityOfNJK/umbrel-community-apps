@@ -4,7 +4,7 @@ name: Synapse (Custom)
 tagline: Silly synapse domain
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/matrix.svg
 category: Social
-version: "1.6.0"
+version: "1.7.0"
 port: 8008
 description: >-
   This synapse matrix server is customized for my home use.
@@ -19,7 +19,7 @@ gallery:
   - https://apps.umbrel.com/_next/image?url=https%3A%2F%2Fgetumbrel.github.io%2Fumbrel-apps-gallery%2Fsynapse%2F2.jpg&w=3840&q=75
   - https://apps.umbrel.com/_next/image?url=https%3A%2F%2Fgetumbrel.github.io%2Fumbrel-apps-gallery%2Fsynapse%2F3.jpg&w=3840&q=75
 releaseNotes: >-
-  Test 6
+  Finally works fine
 dependencies: []
 path: ""
 defaultUsername: ""
