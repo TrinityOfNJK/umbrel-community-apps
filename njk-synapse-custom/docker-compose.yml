@@ -3,7 +3,7 @@ version: "3.7"
 services:
   app_proxy:
     environment:
-      APP_HOST: synapse_server_1
+      APP_HOST: njk-synapse-custom_server_1
       APP_PORT: $APP_SYNAPSE_PORT
       PROXY_AUTH_ADD: "false"
 
