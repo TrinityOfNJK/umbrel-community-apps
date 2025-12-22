@@ -19,7 +19,7 @@ services:
       UID: "1000"
       GID: "1000"
       SYNAPSE_HTTP_PORT: "${APP_SYNAPSE_PORT}"
-      SYNAPSE_SERVER_NAME: "silly.com"
+      SYNAPSE_SERVER_NAME: "${APP_HIDDEN_SERVICE}"
       SYNAPSE_REPORT_STATS: "yes"
       SYNAPSE_ENABLE_REGISTRATION: "yes"
       SYNAPSE_NO_TLS: "yes"
