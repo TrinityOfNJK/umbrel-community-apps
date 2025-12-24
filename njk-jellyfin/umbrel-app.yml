@@ -2,7 +2,7 @@ manifestVersion: 1
 id: njk-jellyfin
 category: media
 name: Jellyfin
-version: "1.0"
+version: "1.1"
 tagline: The Free Software Media System
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/jellyfin.png
 description: >-
