@@ -8,14 +8,14 @@ services:
     container_name: paperless_app_proxy_1
   broker:
     image: >-
-      docker.io/library/redis:latest
+      docker.io/library/redis:8
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/redisdata:/data
     container_name: paperless_broker_1
   db:
     image: >-
-      docker.io/library/postgres:latest
+      docker.io/library/postgres:18
     restart: on-failure
     volumes:
       - ${APP_DATA_DIR}/data/pgdata:/var/lib/postgresql/data
@@ -46,3 +46,15 @@ services:
       PAPERLESS_ADMIN_USER: Noa
       PAPERLESS_ADMIN_PASSWORD: $APP_PASSWORD
       PAPERLESS_OCR_LANGUAGE: hrv
+  gotenberg:
+    image: docker.io/gotenberg/gotenberg:8.25
+    restart: on-failure
+
+    command:
+      - "gotenberg"
+      - "--chromium-disable-javascript=true"
+      - "--chromium-allow-list=file:///tmp/.*"
+
+  tika:
+    image: apache/tika:latest
+    restart: on-failure

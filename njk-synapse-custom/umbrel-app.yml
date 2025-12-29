@@ -2,7 +2,7 @@ manifestVersion: 1
 id: njk-synapse-custom
 name: Synapse (Custom)
 tagline: Silly synapse domain
-icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/matrix.svg
+icon: https://getumbrel.github.io/umbrel-apps-gallery/synapse/icon.svg
 category: Social
 version: "latest-custom-1"
 port: 8008

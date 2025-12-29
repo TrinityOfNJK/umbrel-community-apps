@@ -2,7 +2,7 @@ manifestVersion: 1
 id: njk-paperless
 category: files
 name: Paperless-ngx
-icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/paperless-ngx.png
+icon: https://getumbrel.github.io/umbrel-apps-gallery/paperless/icon.svg
 version: "latest-custom-1"
 tagline: Transform your physical documents into a searchable online archive
 description: >-
@@ -33,6 +33,10 @@ dependencies: []
 repo: https://github.com/paperless-ngx/paperless-ngx
 support: https://github.com/paperless-ngx/paperless-ngx/discussions
 port: 2349
+gallery:
+  - https://apps.umbrel.com/_next/image?url=https%3A%2F%2Fgetumbrel.github.io%2Fumbrel-apps-gallery%2Fpaperless%2F1.jpg&w=1920&q=75
+  - https://apps.umbrel.com/_next/image?url=https%3A%2F%2Fgetumbrel.github.io%2Fumbrel-apps-gallery%2Fpaperless%2F2.jpg&w=750&q=75
+  - https://apps.umbrel.com/_next/image?url=https%3A%2F%2Fgetumbrel.github.io%2Fumbrel-apps-gallery%2Fpaperless%2F3.jpg&w=750&q=75
 path: ""
 defaultUsername: "Noa"
 deterministicPassword: true
