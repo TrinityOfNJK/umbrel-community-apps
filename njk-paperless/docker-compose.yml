@@ -25,7 +25,7 @@ services:
       POSTGRES_PASSWORD: paperless
     container_name: paperless_db_1
   webserver:
-    build: .
+    image: ghcr.io/paperless-ngx/paperless-ngx:latest
     restart: on-failure
     depends_on:
       - db
@@ -45,6 +45,8 @@ services:
       PAPERLESS_TIKA_ENDPOINT: http://paperless_tika_1:9998
       PAPERLESS_ADMIN_USER: Noa
       PAPERLESS_ADMIN_PASSWORD: $APP_PASSWORD
+      PAPERLESS_OCR_LANGUAGES: hrv eng
+      PAPERLESS_OCR_LANGUAGE: hrv
   gotenberg:
     image: docker.io/gotenberg/gotenberg:8.25
     restart: on-failure
