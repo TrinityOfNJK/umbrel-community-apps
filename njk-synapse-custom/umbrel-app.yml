@@ -4,7 +4,7 @@ name: Synapse (Custom)
 tagline: Silly synapse domain
 icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/svg/matrix.svg
 category: Social
-version: "1.7.0"
+version: "latest-custom-1"
 port: 8008
 description: >-
   This synapse matrix server is customized for my home use.

@@ -1,0 +1,48 @@
+version: '3.7'
+services:
+  app_proxy:
+    environment:
+      APP_HOST: njk-paperless_webserver_1
+      APP_PORT: 8000
+      PROXY_AUTH_ADD: 'false'
+    container_name: paperless_app_proxy_1
+  broker:
+    image: >-
+      docker.io/library/redis:latest
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/redisdata:/data
+    container_name: paperless_broker_1
+  db:
+    image: >-
+      docker.io/library/postgres:latest
+    restart: on-failure
+    volumes:
+      - ${APP_DATA_DIR}/data/pgdata:/var/lib/postgresql/data
+    environment:
+      POSTGRES_DB: paperless
+      POSTGRES_USER: paperless
+      POSTGRES_PASSWORD: paperless
+    container_name: paperless_db_1
+  webserver:
+    build: .
+    restart: on-failure
+    depends_on:
+      - db
+      - broker
+      - gotenberg
+      - tika
+    volumes:
+      - ${APP_DATA_DIR}/data/data:/usr/src/paperless/data
+      - ${APP_DATA_DIR}/data/media:/usr/src/paperless/media
+      - ${UMBREL_ROOT}/home/paperless/export:/usr/src/paperless/export
+      - ${UMBREL_ROOT}/home/paperless/consume:/usr/src/paperless/consume
+    environment:
+      PAPERLESS_REDIS: redis://paperless_broker_1:6379
+      PAPERLESS_DBHOST: paperless_db_1
+      PAPERLESS_TIKA_ENABLED: 1
+      PAPERLESS_TIKA_GOTENBERG_ENDPOINT: http://paperless_gotenberg_1:3000
+      PAPERLESS_TIKA_ENDPOINT: http://paperless_tika_1:9998
+      PAPERLESS_ADMIN_USER: Noa
+      PAPERLESS_ADMIN_PASSWORD: $APP_PASSWORD
+      PAPERLESS_OCR_LANGUAGE: hrv
