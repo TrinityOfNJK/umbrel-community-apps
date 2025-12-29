@@ -2,6 +2,7 @@ manifestVersion: 1
 id: njk-paperless
 category: files
 name: Paperless-ngx
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/paperless-ngx.png
 version: "latest-custom-1"
 tagline: Transform your physical documents into a searchable online archive
 description: >-
