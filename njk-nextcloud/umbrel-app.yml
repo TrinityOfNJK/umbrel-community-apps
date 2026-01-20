@@ -3,6 +3,7 @@ id: njk-nextcloud
 category: files
 name: Nextcloud
 version: "32.0.1"
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/nextcloud-light.png
 tagline: Productivity platform that keeps you in control
 description: >-
   Nextcloud puts your data at your fingertips, under your control.
