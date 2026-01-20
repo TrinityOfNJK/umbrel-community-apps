@@ -4,7 +4,7 @@ category: media
 name: Jellyfin
 version: "latest-custom-2"
 tagline: The Free Software Media System
-icon: https://getumbrel.github.io/umbrel-apps-gallery/jellyfin/icon.svg
+icon: https://cdn.jsdelivr.net/gh/selfhst/icons@main/png/nextcloud-light.png
 description: >-
   Custom docker compose for mounting external drives.
 developer: Jellyfin
